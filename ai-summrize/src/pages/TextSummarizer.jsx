@@ -469,7 +469,7 @@ const TextSummarizer = () => {
         onSelectHistoryItem={selectHistoryItem}
       />
       <div className="flex-1 overflow-hidden">
-        {isSidebarOpen ? null : (
+        {isSidebarOpen ? <img src="navanime.gif" alt="" className=" w-16 rounded-full md:hidden fixed top-0 left-4 z-30 "/> : (
           <MenuButton onClick={() => setIsSidebarOpen(!isSidebarOpen)} />
         )}
         <Main
