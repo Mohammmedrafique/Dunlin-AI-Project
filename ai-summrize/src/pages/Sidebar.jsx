@@ -30,7 +30,7 @@ const Sidebar = ({ isOpen, onClose, history, onSelectHistoryItem }) => {
           <X size={20} />
         </button>
       </div>
-      <div className="flex-grow overflow-y-auto space-y-2">
+      <div className="flex-grow overflow-y-auto space-y-2 border-t border-black">
         {history.map((item) => (
           <div
             key={item._id}
@@ -44,10 +44,10 @@ const Sidebar = ({ isOpen, onClose, history, onSelectHistoryItem }) => {
           </div>
         ))}
       </div>
-      <div className="mt-auto space-y-2 mb-32 mt-10">
+      <div className=" space-y-2 lg:mb-16 mb-20 mt-auto border-t border-black">
         <Link
           to="/home"
-          className="flex items-center p-2 hover:bg-gray-100 rounded cursor-pointer transition-colors duration-200"
+          className="flex items-center p-2 mt-5 hover:bg-gray-100 rounded cursor-pointer transition-colors duration-200"
           onClick={onClose}
         >
           <Home size={20} className="mr-2" />
@@ -55,7 +55,7 @@ const Sidebar = ({ isOpen, onClose, history, onSelectHistoryItem }) => {
         </Link>
         <button
           onClick={handleLogout}
-          className="flex items-center w-full p-2 hover:bg-red-100 rounded cursor-pointer transition-colors duration-200"
+          className="flex items-center font-bold w-28 p-2 hover:bg-red-100 rounded cursor-pointer transition-colors duration-200 bg-green-700"
         >
           <LogOut size={20} className="mr-2" />
           Logout
